@@ -1,4 +1,4 @@
-package com.devdroid.pokemonapp.ui.pokemon
+package com.devdroid.pokemonapp.ui.favorite
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,8 +8,7 @@ import android.view.ViewGroup
 import com.devdroid.pokemonapp.R
 
 
-class PokemonFragment : Fragment() {
-
+class FavoriteFragment : Fragment() {
 
 
     override fun onCreateView(
@@ -17,8 +16,7 @@ class PokemonFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_pokemon, container, false)
+        return inflater.inflate(R.layout.fragment_favorite, container, false)
     }
-
 
 }
