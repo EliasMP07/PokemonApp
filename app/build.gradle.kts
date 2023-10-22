@@ -1,11 +1,14 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")//Modulo Dagger hint
+    id("com.google.dagger.hilt.android")//Modulo dagger hint
+    id("androidx.navigation.safeargs.kotlin")//Modulo de navegacion
 }
 
 android {
     namespace = "com.devdroid.pokemonapp"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.devdroid.pokemonapp"
@@ -40,6 +43,14 @@ android {
 
 dependencies {
 
+    val navVersion = "2.7.1"
+    //NavComponent
+    implementation("androidx.navigation:navigation-fragment-ktx:$navVersion")
+    implementation("androidx.navigation:navigation-ui-ktx:$navVersion")
+
+    //DaggerHilt
+    implementation("com.google.dagger:hilt-android:2.48")
+    kapt("com.google.dagger:hilt-compiler:2.48")
 
 
     implementation("androidx.core:core-ktx:1.9.0")
